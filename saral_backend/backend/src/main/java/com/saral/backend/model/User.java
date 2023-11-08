@@ -18,7 +18,7 @@ import lombok.ToString;
 public class User {
 
     @Id
-    private Long id;
+    private String id;
     private Long phone;
     private String name;
     private String email;
