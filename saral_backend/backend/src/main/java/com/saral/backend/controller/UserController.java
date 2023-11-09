@@ -42,13 +42,13 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable("id") Long id) {
+    public void deleteUser(@PathVariable("id") String id) {
         this.userService.deleteUser(id);
         System.out.println("User deleted successfully...");
     }
 
     @PutMapping("/updatename/{id}&{name}")
-    public User updateName(@PathVariable("id") Long id, @PathVariable("name") String name) {
+    public User updateName(@PathVariable("id") String id, @PathVariable("name") String name) {
         return userService.updateName(id, name);
     }
 
@@ -65,7 +65,7 @@ public class UserController {
     // }
 
     @PutMapping("/updateprovider/{id}&{provider}")
-    public User updateProvider(@PathVariable("id") Long id, @PathVariable("provider") boolean provider) {
+    public User updateProvider(@PathVariable("id") String id, @PathVariable("provider") boolean provider) {
         return userService.updateProvider(id, provider);
     }
 

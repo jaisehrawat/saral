@@ -7,12 +7,12 @@ import com.saral.backend.model.User;
 @Service
 public interface UserService {
     List<User> getAllUser();
-    User getUserById(Long id);
+    User getUserById(String id);
     User createUser(User user);
-    User updateName(Long id, String name);
+    User updateName(String id, String name);
     // User updateNumber(Long id, Long number);
     // User updateProfilePhoto(Long id, String profilePhoto);
-    User updateProvider(Long id, boolean provider);
-    void deleteUser(Long id);
+    User updateProvider(String id, boolean provider);
+    void deleteUser(String id);
     User getUserByPhone(Long phone);
 }

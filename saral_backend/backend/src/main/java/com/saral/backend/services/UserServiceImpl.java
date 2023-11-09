@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateName(Long id, String name) {
+    public User updateName(String id, String name) {
         User existingUser = getUserById(id);
         if (existingUser != null) {
             existingUser.setName(name);
@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(Long id) {
+    public void deleteUser(String id) {
         userRepository.deleteById(id);
     }
 
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserById(Long id) {
+    public User getUserById(String id) {
         return this.userRepository.findById(id).orElse(null);
     }
 
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
     // }
 
     @Override
-    public User updateProvider(Long id, boolean provider) {
+    public User updateProvider(String id, boolean provider) {
         User existingUser = getUserById(id);
         if (existingUser != null) {
             existingUser.setProvider(provider);
